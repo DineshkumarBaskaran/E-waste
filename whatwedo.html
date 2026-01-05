@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What We Do-Blue Planet E-Waste Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+  
+  <!-- Why Blue Planet Section Styles -->
+  <style>
+    .why-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      font-weight: 800;
+    }
+
+    .cards-wrapper {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .info-card {
+      width: 380px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-header {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .info-card.blue .card-header {
+      background: #0b3b78;
+    }
+
+    .info-card.green .card-header {
+      background: #4fa272;
+    }
+
+    .card-list {
+      list-style: none;
+      padding: 25px;
+    }
+
+    .card-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Icon Styling */
+    .icon {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .icon.blue {
+      background: #e6eef8;
+      color: #0b3b78;
+    }
+
+    .icon.green {
+      background: #e7f4ee;
+      color: #2f7d57;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .info-card {
+        width: 100%;
+      }
+    }
+
+    /* Comprehensive Solutions Section Styles */
+    .solutions-section {
+      background: #58a575;
+      padding: 70px 20px;
+      color: #fff;
+    }
+
+    .solutions-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+
+    .solutions-section h2 span {
+      font-weight: 700;
+    }
+
+    /* ITEM */
+    .solution-item {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      display: flex;
+      gap: 70px;
+      align-items: center;
+    }
+
+    /* IMAGE WITH SHADOW */
+    .image-wrap {
+      position: relative;
+      width: 360px;
+      flex-shrink: 0;
+    }
+
+    .image-wrap img {
+      width: 100%;
+      border-radius: 16px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BACK SHADOW BLOCK */
+    .image-shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    /* CONTENT */
+    .content h3 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .content p {
+      font-size: 15px;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .solution-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-shadow {
+        top: 15px;
+        left: 15px;
+      }
+    }
+
+    /* Divider Row Styles */
+    .divider-row::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      left: 50%;
+      width: 3px;
+      background-color: #d4d4d4;
+    }
+
+    /* Hide divider on mobile */
+    @media (max-width: 991px) {
+      .divider-row::after {
+        display: none;
+      }
+    }
+
+    /* Tablet Responsive Styles */
+    @media (max-width: 1024px) and (min-width: 769px) {
+      /* Navbar Tablet */
+      .navbar {
+        padding: 15px 0;
+      }
+      
+      .navbar-brand img {
+        height: 50px;
+      }
+      
+      .navbar-nav {
+        gap: 20px !important;
+        font-size: 14px !important;
+      }
+      
+      /* Hero Section Tablet */
+      .hero-wrapper .hero-rounded-container {
+        min-height: 400px;
+        border-radius: 30px;
+      }
+      
+      /* Sustainability Section Tablet */
+      .sustainability-section h2 {
+        font-size: 28px;
+      }
+      
+      .sustainability-section p {
+        font-size: 16px;
+      }
+      
+      /* Solutions Section Tablet */
+      .solutions-section {
+        padding: 50px 20px;
+      }
+      
+      .solutions-section h2 {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+      
+      .solution-item {
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+      
+      .image-wrap {
+        width: 300px;
+      }
+      
+      .content h3 {
+        font-size: 22px;
+      }
+      
+      .content p {
+        font-size: 14px;
+      }
+      
+      /* Info Cards Tablet */
+      .why-section {
+        padding: 50px 20px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+      
+      .info-card {
+        width: 340px;
+      }
+      
+      .card-header {
+        font-size: 18px;
+        padding: 14px;
+      }
+      
+      .card-list li {
+        font-size: 14px;
+        padding: 10px 0;
+      }
+      
+      /* Impact Section Tablet */
+      .our-impact-section h2 {
+        font-size: 28px;
+      }
+      
+      .our-impact-section ul li {
+        font-size: 15px;
+      }
+      
+      /* Footer Tablet */
+      .footer-container {
+        padding: 30px;
+      }
+      
+      .footer-wrapper h3 {
+        font-size: 20px;
+      }
+      
+      .footer-wrapper p {
+        font-size: 13px;
+      }
+      
+      .footer-wrapper h5 {
+        font-size: 16px;
+      }
+      
+      .footer-wrapper h6 {
+        font-size: 14px;
+      }
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      /* Navbar Mobile */
+      .navbar {
+        padding: 10px 0;
+      }
+      
+      .navbar-brand img {
+        height: 40px !important;
+      }
+      
+      .navbar-toggler {
+        display: block !important;
+        padding: 6px 10px;
+      }
+      
+      .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid #e5e7eb;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 15px;
+        border-radius: 0 0 12px 12px;
+        z-index: 1000;
+      }
+      
+      .navbar-collapse.show {
+        display: block !important;
+      }
+      
+      .navbar-nav {
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: flex-start !important;
+      }
+      
+      .navbar-nav .nav-item {
+        width: 100%;
+      }
+      
+      .navbar-nav .nav-link {
+        padding: 10px 12px !important;
+        border-radius: 6px;
+        font-size: 14px !important;
+        width: 100%;
+        text-align: left;
+      }
+      
+      .d-flex.align-items-center.gap-3.ms-lg-5 {
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid #e5e7eb !important;
+        justify-content: flex-start !important;
+        margin-left: 0 !important;
+        gap: 12px !important;
+      }
+      
+      .d-flex.align-items-center.gap-3.ms-lg-5 i {
+        font-size: 16px !important;
+        padding: 6px;
+        border-radius: 6px;
+      }
+      
+      /* Hero Section Mobile */
+      .hero-wrapper .hero-rounded-container {
+        min-height: 300px;
+        border-radius: 20px;
+      }
+      
+      /* Sustainability Section Mobile */
+      .sustainability-section {
+        padding: 40px 15px;
+      }
+      
+      .sustainability-section .row {
+        text-align: center;
+      }
+      
+      .sustainability-section h2 {
+        font-size: 22px;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .sustainability-section p {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      
+      .sustainability-section img {
+        margin-bottom: 20px;
+        max-width: 250px;
+      }
+      
+      .sustainability-section h3 {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      
+      .sustainability-section .text-muted {
+        font-size: 13px;
+        padding: 0 10px;
+      }
+      
+      /* Solutions Section Mobile */
+      .solutions-section {
+        padding: 40px 15px;
+      }
+      
+      .solutions-section h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      
+      .solution-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        margin-bottom: 35px;
+      }
+      
+      .image-wrap {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+      
+      .image-shadow {
+        top: 10px;
+        left: 10px;
+      }
+      
+      .content {
+        text-align: center;
+      }
+      
+      .content h3 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+      
+      .content p {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      
+      /* Who We Serve Section Mobile */
+      .who-we-serve-section {
+        padding: 40px 15px;
+      }
+      
+      .who-we-serve-section img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Info Cards Mobile */
+      .why-section {
+        padding: 40px 15px;
+      }
+      
+      .section-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+      
+      .cards-wrapper {
+        gap: 20px;
+      }
+      
+      .info-card {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+      
+      .card-header {
+        font-size: 16px;
+        padding: 12px;
+      }
+      
+      .card-list {
+        padding: 20px;
+      }
+      
+      .card-list li {
+        font-size: 13px;
+        padding: 10px 0;
+        gap: 12px;
+      }
+      
+      .icon {
+        min-width: 32px;
+        height: 32px;
+        font-size: 14px;
+      }
+      
+      /* Impact Section Mobile */
+      .our-impact-section {
+        padding: 40px 15px;
+      }
+      
+      .our-impact-section h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      
+      .our-impact-section .row {
+        text-align: center;
+      }
+      
+      .our-impact-section img {
+        margin-bottom: 25px;
+        max-width: 280px;
+      }
+      
+      .our-impact-section ul {
+        text-align: left;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      
+      .our-impact-section ul li {
+        font-size: 13px;
+        margin-bottom: 12px;
+        padding-left: 5px;
+      }
+      
+      /* Regenerative Future Section Mobile */
+      .regenerative-future-section {
+        padding: 40px 15px;
+      }
+      
+      .regenerative-future-section h2 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+      }
+      
+      .regenerative-future-section p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      
+      /* Footer Mobile */
+      .footer-wrapper {
+        padding: 20px 10px;
+      }
+      
+      .footer-container {
+        padding: 25px 20px;
+        border-radius: 20px;
+      }
+      
+      .footer-container .row {
+        gap: 30px;
+      }
+      
+      .footer-container .col-lg-4,
+      .footer-container .col-lg-5,
+      .footer-container .col-lg-3 {
+        width: 100%;
+        border: none !important;
+        text-align: center;
+      }
+      
+      .footer-wrapper img {
+        height: 40px !important;
+        margin-bottom: 15px;
+      }
+      
+      .footer-wrapper h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .footer-wrapper p {
+        font-size: 12px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .footer-wrapper h5 {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      
+      .footer-wrapper h6 {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      
+      .footer-wrapper .footer-links {
+        gap: 10px;
+      }
+      
+      .footer-wrapper .footer-links a {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+      
+      .footer-wrapper .newsletter-box {
+        margin-top: 20px;
+      }
+      
+      .footer-wrapper .newsletter-box h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      
+      .footer-wrapper .custom-newsletter-input {
+        padding: 12px 16px !important;
+        font-size: 13px;
+      }
+      
+      .footer-wrapper .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+      
+      .footer-wrapper .d-flex.align-items-center.gap-2 {
+        justify-content: center;
+      }
+      
+      .footer-wrapper .fs-5 {
+        font-size: 18px !important;
+      }
+      
+      .social-icon-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+      }
+    }
+
+    /* Small Mobile Styles */
+    @media (max-width: 480px) {
+      /* Hero Small Mobile */
+      .hero-wrapper .hero-rounded-container {
+        min-height: 250px;
+        border-radius: 15px;
+      }
+      
+      /* Solutions Small Mobile */
+      .image-wrap {
+        max-width: 240px;
+      }
+      
+      .content h3 {
+        font-size: 16px;
+      }
+      
+      .content p {
+        font-size: 12px;
+      }
+      
+      /* Info Cards Small Mobile */
+      .card-header {
+        font-size: 14px;
+        padding: 10px;
+      }
+      
+      .card-list {
+        padding: 15px;
+      }
+      
+      .card-list li {
+        font-size: 12px;
+        padding: 8px 0;
+        gap: 10px;
+      }
+      
+      .icon {
+        min-width: 28px;
+        height: 28px;
+        font-size: 12px;
+      }
+      
+      /* Footer Small Mobile */
+      .footer-container {
+        padding: 20px 15px;
+      }
+      
+      .footer-wrapper h3 {
+        font-size: 16px;
+      }
+      
+      .footer-wrapper p {
+        font-size: 11px;
+      }
+      
+      .footer-wrapper .custom-newsletter-input {
+        padding: 10px 14px !important;
+        font-size: 12px;
+      }
+      
+      .footer-wrapper .btn {
+        font-size: 11px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 position-relative">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="images/logo.png" alt="BluePlanet" height="60" />
+      </a>
+      <button class="navbar-toggler" type="button" id="navbarTogglerBtn" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-4 fw-bolder">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="whatwedo.html">What We Do</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="recycle.html">Recycle</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#sustainability">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#features">Feature</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 ms-lg-5">
+          <i class="bi bi-search fs-4 cursor-pointer"></i>
+          <i class="bi bi-list fs-2 cursor-pointer fw-bold"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-wrapper px-3">
+    <div class="container hero-rounded-container position-relative overflow-visible text-white d-flex align-items-center" style="background-image: url('images/hero_bg.png'); background-size: cover; background-position: center; min-height: 450px; border-radius: 40px;">
+      <div class="row w-100 position-relative z-2 ps-lg-5 align-items-center">
+  </div>
+  </div>
+  </section>
+
+<section class="sustainability-section py-5">
+  <div class="container">
+    <div class="row align-items-center position-relative divider-row">
+      <div class="col-lg-6 text-center">
+        <img src="images/global.png" alt="Sustainability Graphic" class="img-fluid">
+      </div>
+
+      <div class="col-lg-6">
+        <h2 class="text-success fw-bold">
+          Sustainability at<br>Blue Planet E-Waste Solutions—
+        </h2>
+        <p class="fs-5">
+          Driving Circular Transformation Through Refurbishment, Responsible Recycling and Carbon Reduction
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <h3 class="fw-bold">Technology evolves fast.<br>Waste should not.</h3>
+      <p class="text-muted mt-3 px-lg-5">
+        At Blue Planet E-Waste Solutions, we are building one of India's most advanced and transparent circular ecosystems for electronic waste — enabling organizations to securely recycle, refurbish, and recover value from end-of-life electronic assets while protecting the planet and future generations.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section class="solutions-section py-5 text-white" style="background-color: #58a575;">
+    <div class="container">
+      <h2 class="text-center mb-5">Our <span>Comprehensive</span> Solutions</h2>
+
+      <!-- Item 1 -->
+      <div class="solution-item">
+        <div class="image-wrap">
+          <div class="image-shadow"></div>
+          <img src="images/plant_1.png" alt="E-Waste Recycling">
+        </div>
+
+        <div class="content">
+          <h3>E-Waste Recycling &<br>Material Recovery</h3>
+          <p>
+            We manage the complete recycling lifecycle from safe collection
+            to segregation, dismantling, extraction of precious metals, and
+            environmentally responsible treatment of hazardous materials.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="solution-item">
+        <div class="image-wrap">
+          <div class="image-shadow"></div>
+          <img src="images/plant_2.png" alt="Refurbishment">
+        </div>
+
+        <div class="content">
+          <h3>Refurbishment of<br>Home Assets</h3>
+          <p>
+            Through OEM-authorized refurbishment, diagnostics, restoration,
+            cosmetic renewal, and secure data sanitization, we extend device life.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="solution-item">
+        <div class="image-wrap">
+          <div class="image-shadow"></div>
+          <img src="images/plant_3.png" alt="IT Repair">
+        </div>
+
+        <div class="content">
+          <h3>IT Repair &<br>Refurbishment</h3>
+          <p>
+            World-class data security infrastructure including off-site data wiping,
+            degaussing, and physical hard disk shredding.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="solution-item">
+        <div class="image-wrap">
+          <div class="image-shadow"></div>
+          <img src="images/plant_4.png" alt="Consumer Appliance Return">
+        </div>
+
+        <div class="content">
+          <h3>Consumer Appliance Return D1 D2 D3</h3>
+          <p>
+            World-class data security infrastructure including off-site data wiping,
+            degaussing, and physical hard disk shredding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who-we-serve-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <img src="images/who.png" alt="Who We Serve" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-blue-planet-section py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">
+        Why Blue Planet <span>E-waste Solutions</span>
+      </h2>
+
+      <div class="cards-wrapper">
+
+        <!-- Our Differentiators -->
+        <div class="info-card blue">
+          <div class="card-header">Our Differentiators</div>
+          <ul class="card-list">
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-recycle"></i></span>
+              OEM-certified refurbishment & recycling
+            </li>
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-eye"></i></span>
+              Transparency & full traceability
+            </li>
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-ban"></i></span>
+              Zero-landfill & zero-leakage operations
+            </li>
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-lock"></i></span>
+              Secure, certified data protection
+            </li>
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-leaf"></i></span>
+              Circular economy model
+            </li>
+            <li>
+              <span class="icon blue"><i class="fa-solid fa-cloud"></i></span>
+              Carbon credit generation
+            </li>
+          </ul>
+        </div>
+
+        <!-- What They Deliver -->
+        <div class="info-card green">
+          <div class="card-header">What They Deliver</div>
+          <ul class="card-list">
+            <li>
+              <span class="icon green"><i class="fa-solid fa-circle-check"></i></span>
+              Guaranteed reliability & performance
+            </li>
+            <li>
+              <span class="icon green"><i class="fa-solid fa-route"></i></span>
+              100% accountability from source to disposal
+            </li>
+            <li>
+              <span class="icon green"><i class="fa-solid fa-shield-heart"></i></span>
+              Sustainable, ethical waste handling
+            </li>
+            <li>
+              <span class="icon green"><i class="fa-solid fa-scale-balanced"></i></span>
+              Eliminates corporate risk & liability
+            </li>
+            <li>
+              <span class="icon green"><i class="fa-solid fa-arrow-trend-up"></i></span>
+              Waste converted into enterprise value
+            </li>
+            <li>
+              <span class="icon green"><i class="fa-solid fa-coins"></i></span>
+              Monetizable sustainability impact
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="our-impact-section py-5 text-white" style="background-color: #013e7f;">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Impact</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <img src="images/what_is_ewaste.png" alt="Our Impact" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <ul class="list-unstyled">
+            <li class="mb-3"><i class="fas fa-chevron-right me-2"></i> Diverts thousands of tonnes of e-waste away from landfills annually</li>
+            <li class="mb-3"><i class="fas fa-chevron-right me-2"></i> Reduces carbon emissions and harmful pollutants</li>
+            <li class="mb-3"><i class="fas fa-chevron-right me-2"></i> Protects earth's mineral resources through recovery & reuse</li>
+            <li class="mb-3"><i class="fas fa-chevron-right me-2"></i> Creates skill employment in circular economy sectors</li>
+            <li class="mb-3"><i class="fas fa-chevron-right me-2"></i> Supports national sustainability and EPR compliance goals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="regenerative-future-section py-5 text-center position-relative overflow-hidden">
+    <div class="container z-1 position-relative">
+      <h2 class="display-4 fw-bold mb-3">Together, We Can Build a <span class="text-success">Regenerative Future</span></h2>
+      <p class="lead mb-0 mx-auto" style="max-width: 800px;">Every device recycled through Blue Planet E-Waste Solutions is a step toward a cleaner planet, a stronger circular economy, and a more resilient world.</p>
+    </div>
+  </section>
+
+   <footer class="footer-wrapper p-4" id="contact">
+      <div class="container-fluid bg-success text-white rounded-5 p-5 position-relative overflow-hidden footer-container">
+        <div class="row g-5">
+          <!-- Left Column -->
+          <div class="col-lg-4 pe-lg-5 border-end border-white border-opacity-25">
+            <img src="images/logo_placeholder.png" height="60" alt="BluePlanet" class="mb-4" />
+            <h3 class="fw-bold mb-4">Turning Waste to<br />Treasure</h3>
+            <p class="small text-white opacity-75 mb-5 lh-lg" style="text-align: justify;">Blue Planet E-Waste Solutions is a leading integrated technology-driven platform for responsible e-waste recycling, refurbishment, and resource recovery. We transform discarded electronics into valuable materials through ethical, compliant, and circular economy practices.</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="social-icon-circle"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon-circle"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon-circle"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Middle Content -->
+          <div class="col-lg-5 d-flex flex-column">
+            <div class="row mb-4">
+              <div class="col-sm-6">
+                <h5 class="fw-bold mb-4">About</h5>
+                <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>About</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>Who we are</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>What we do</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>Impact</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>Contact us</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h5 class="fw-bold mb-4">Services</h5>
+                <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>E-Waste Recyling</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>Refurbishment</a></li>
+                  <li><a href="#" class="text-white text-decoration-none d-flex align-items-center"><i class="bi bi-arrow-right-short me-2"></i>Precious metals</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="newsletter-box mt-auto pt-3">
+              <h4 class="fw-light mb-4">Newsletters</h4>
+              <div class="position-relative w-100">
+                <i class="bi bi-envelope position-absolute top-50 translate-middle-y ms-4 fs-5" style="z-index: 5; color: #2e5a27;"></i>
+                <input type="email" class="form-control rounded-pill border-0 py-3 ps-5 pe-5 custom-newsletter-input" placeholder="Email Address" style="padding-left: 3.5rem !important;" />
+                <button class="btn rounded-pill position-absolute end-0 top-50 translate-middle-y me-2 px-4 py-2 fw-bold text-white shadow-none" style="background-color: #000; font-size: 0.9rem;">Submit</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3 opacity-75">Corporate Office</h6>
+            <p class="small text-white opacity-75 mb-4">202, 2nd floor, SAS Tower<br />Sector 38, Gurugram,<br />Haryana 122001</p>
+
+            <h6 class="fw-bold mb-3 opacity-75">Recycling Facility @ Binola</h6>
+            <p class="small text-white opacity-75 mb-4">Khewat No. 654/617 Min,<br />Khata No. 781, Rect No. 125,<br />Kill Binola Industrial Area<br />Main road, Binola Industrial<br />Area, Gurugram - 122413,<br />Haryana, India</p>
+
+            <h5 class="fw-bold mb-2">Call Us</h5>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill"></i>
+              <span class="fw-bold fs-5">18003090950</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center small text-white opacity-75 mt-5">
+          <p class="mb-0">© Copyright 2025 by Blue Planet Environmental Solutions PVt. Ltd.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.getElementById('navbarTogglerBtn');
+      const navbarNav = document.getElementById('navbarNav');
+      
+      if (navbarToggler && navbarNav) {
+        // Toggle mobile menu
+        navbarToggler.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Toggle the 'show' class for Bootstrap collapse
+          navbarNav.classList.toggle('show');
+          
+          // Toggle aria-expanded for accessibility
+          const isExpanded = navbarNav.classList.contains('show');
+          navbarToggler.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close mobile menu when clicking on navigation links
+        const navLinks = navbarNav.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navbarNav.classList.remove('show');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+          });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (navbarNav.classList.contains('show')) {
+            const isClickInsideNav = navbarNav.contains(e.target);
+            const isClickOnToggler = navbarToggler.contains(e.target);
+            
+            if (!isClickInsideNav && !isClickOnToggler) {
+              navbarNav.classList.remove('show');
+              navbarToggler.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && navbarNav.classList.contains('show')) {
+            navbarNav.classList.remove('show');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+            navbarToggler.focus();
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
+          
